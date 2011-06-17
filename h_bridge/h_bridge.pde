@@ -1,4 +1,6 @@
 
+#include "Streaming.h"
+
 boolean
   switchOutputAllow = true;
 
@@ -18,7 +20,9 @@ const int
   motor2Enga = 12,      // motor 2 on/off
   switchOutputLed = 13; // motor on/off led
 
-void setup() {
+
+void setup()
+{
   Serial.begin(9600);
   pinMode(turnPin, INPUT);
   pinMode(switchPin, INPUT);
@@ -44,7 +48,8 @@ void setup() {
   digitalWrite(switchOutputLed, LOW);
 }
 
-void loop() {
+void loop()
+{
   // read what is needed
   valueButtonSwitch = digitalRead(switchPin);
   valueButtonTurn = map(analogRead(turnPin), 0, 1023, 0, 255);
@@ -99,9 +104,5 @@ void loop() {
   }
   ///////////////////////////////////////
   // set output
-  Serial.print("Status: ");
-  Serial.print((switchAction == 1 ? "ON " : "OFF"));
-  Serial.print(" | Turn: ");
-  Serial.print(valueButtonTurn);
-  Serial.print("\n");
+  Serial << "Status: " << (switchAction == 1 ? "ON " : "OFF") << " | Turn: " << valueButtonTurn << "\n";
 }

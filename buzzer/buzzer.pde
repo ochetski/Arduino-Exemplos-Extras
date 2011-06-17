@@ -4,7 +4,6 @@
  */
 #include "notes.h"
 
-
 /**
  * Definitions
  */

@@ -1,4 +1,6 @@
 
+#include "Streaming.h";
+
 // define variaveis
 int
   pinLedR = 11,
@@ -7,6 +9,7 @@ int
   pinPotR = A0,
   pinPotG = A1,
   pinPotB = A2;
+
 
 void setup()
 {
@@ -33,11 +36,9 @@ void loop()
 
 
   // exibe resultado como RGB(153, 50, 0);
-  Serial.print("RGB(");
-  Serial.print(map(analogRead(pinPotR), 0, 1023, 0, 255), DEC);
-  Serial.print(", ");
-  Serial.print(map(analogRead(pinPotG), 0, 1023, 0, 255), DEC);
-  Serial.print(", ");
-  Serial.print(map(analogRead(pinPotB), 0, 1023, 0, 255), DEC);
-  Serial.println(");");
+  Serial
+  << "RGB("
+  << map(analogRead(pinPotR), 0, 1023, 0, 255) << ", "
+  << map(analogRead(pinPotG), 0, 1023, 0, 255) << ", "
+  << map(analogRead(pinPotB), 0, 1023, 0, 255) << ");";
 }
