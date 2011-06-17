@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+﻿
 *.jpg
 *.gif
 *.png
@@ -7,14 +7,4 @@
 NewSoftSerialTest
 no_txrx_communication
 nokia3310
-=======
-﻿*.jpg
-*.gif
-*.png
-*.txt
-*.fz
-NewSoftSerialTest
-no_txrx_communication
-nokia3310
->>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
 TwoNSSTest

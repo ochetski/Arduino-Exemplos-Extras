@@ -91,9 +91,3 @@
 #define NOTE_CS8 4435
 #define NOTE_D8  4699
 #define NOTE_DS8 4978
-
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a

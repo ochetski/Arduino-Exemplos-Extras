@@ -4,20 +4,12 @@
  */
 #include "notes.h"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
 /**
  * Definitions
  */
 boolean
   switchOutputAllow = true;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
 int
   switchAction = LOW,
   valueButtonSwitch = LOW,
@@ -199,8 +191,4 @@ void loop() {
   Serial.print((switchAction == HIGH ? "ON " : "OFF"));
   Serial.print(" | Button: ");
   Serial.println("");
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
