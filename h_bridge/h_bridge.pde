@@ -105,6 +105,7 @@ void loop() {
   Serial.print(valueButtonTurn);
   Serial.print("\n");
 }
+<<<<<<< HEAD
 
 
 /*
@@ -259,3 +260,5 @@ return 0;
 }
 
 */
+=======
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a

@@ -40,4 +40,8 @@ void loop()
   Serial.print(", ");
   Serial.print(map(analogRead(pinPotB), 0, 1023, 0, 255), DEC);
   Serial.println(");");
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a

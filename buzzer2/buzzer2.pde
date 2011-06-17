@@ -3,6 +3,10 @@
  * Includes
  */
 #include "notes.h"
+<<<<<<< HEAD
+=======
+#include "Streaming.h"
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
 
 
 /**
@@ -19,7 +23,10 @@ const int
   pinSwitch = 2,     // botao
   pinBuzzer = 8,     // pino do buzzer
   pinOutputLed = 13,
+<<<<<<< HEAD
   /**
+=======
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
   musMbNote[] = {
     NOTE_E5, NOTE_E5, NOTE_E5, NOTE_C5, NOTE_E5, NOTE_G5, NOTE_G4, 
     NOTE_C5, NOTE_G4, NOTE_E4, NOTE_A4, NOTE_B4, NOTE_AS4, NOTE_A4, NOTE_G4, NOTE_E5, NOTE_G5, NOTE_A5, NOTE_F5, NOTE_G5, NOTE_E5, NOTE_C5, NOTE_D5, NOTE_B4, 
@@ -28,6 +35,24 @@ const int
     NOTE_G5, NOTE_FS5, NOTE_F5, NOTE_DS5, NOTE_E5, NOTE_C6, NOTE_C6, NOTE_C6,
     NOTE_G5, NOTE_FS5, NOTE_F5, NOTE_DS5, NOTE_E5, NOTE_GS4, NOTE_A4, NOTE_C5, NOTE_A4, NOTE_C5, NOTE_D5,
     NOTE_DS5, NOTE_D5, NOTE_C5,
+<<<<<<< HEAD
+=======
+    /*
+    NOTE_C5, NOTE_C5, NOTE_C5, NOTE_C5, NOTE_D5, NOTE_E5, NOTE_C5, NOTE_A4, NOTE_G4,
+    NOTE_C5, NOTE_C5, NOTE_C5, NOTE_C5, NOTE_D5, NOTE_E5,
+    */
+    
+/*
+-|  4|-cc-c-cd-ec------|-cc-c-cd-e------|-cc-c-cd-ec------|-ee-e-ce-g-------|
+T|  3|------------ag---|----------------|------------ag---|------------g----|
+A|  2|-----------------|----------------|-----------------|-----------------|
+B|  
+N|  
+A|  4|-ec-------fff---|---aaa-gfe------|-ec-------fff---|----fff-edc-----|
+B|  3|----gg-a--------|-b--------------|----gg-a--------|-b--------------|
+B|  2|----------------|----------------|----------------|----------------|
+*/
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
   },
   musMbSize[] = {
     100, 100, 100, 100, 100, 100, 100, 
@@ -37,6 +62,13 @@ const int
     100, 100, 100, 100, 100, 100, 100, 100,
     100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
     100, 100, 100,
+<<<<<<< HEAD
+=======
+    /*
+    100, 100, 150, 1, 100, 100, 100, 100, 100,
+    100, 100, 100, 100, 100, 250,
+    */
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
   },
   musMbTime[] = {
     100, 200, 200, 100, 200, 400, 400, 
@@ -46,6 +78,7 @@ const int
     100, 100, 100, 200, 230, 200, 100, 550,
     100, 100, 100, 200, 200, 100, 100, 200, 100, 100, 300,
     280, 280, 400,
+<<<<<<< HEAD
   };
   /*/
   musMbNote[] = {
@@ -75,6 +108,13 @@ A|  4|-ec-------fff---|---aaa-gfe------|-ec-------fff---|----fff-edc-----|
 B|  3|----gg-a--------|-b--------------|----gg-a--------|-b--------------|
 B|  2|----------------|----------------|----------------|----------------|
 */
+=======
+    /*
+    110, 180, 250, 150, 200, 180, 180, 180, 330,
+    110, 180, 250, 150, 180, 250,
+    */
+  };
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
 
 long
   tmNow,
@@ -82,7 +122,11 @@ long
   musPos = 0;
   
 float
+<<<<<<< HEAD
   musSpeed = 1.3;
+=======
+  musSpeed = 1.4;
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
 
 void setup()
 {
@@ -133,6 +177,7 @@ void loop()
         musTime = tmNow + (musMbTime[musPos] * musSpeed);
         tone(pinBuzzer, musMbNote[musPos], musMbSize[musPos] * musSpeed);
         musPos++;
+<<<<<<< HEAD
         Serial.print("Time: ");
         Serial.print(musTime);
         Serial.print(" | Pos: ");
@@ -140,12 +185,23 @@ void loop()
         Serial.print(" | ");
         Serial.print((sizeof(musMbTime)/sizeof(int)));
         Serial.println("");
+=======
+        Serial
+          << "Time: "
+          << musTime
+          << " | Pos: "
+          << musPos
+          << " | "
+          << (sizeof(musMbTime)/sizeof(int))
+          << "\n";
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
       }
       else if(musTime <= tmNow) // ja esta na hora?
       {
         musTime = musTime + (musMbTime[musPos] * musSpeed);
         tone(pinBuzzer, musMbNote[musPos], musMbSize[musPos] * musSpeed);
         musPos++;
+<<<<<<< HEAD
         Serial.print("Time: ");
         Serial.print(musTime);
         Serial.print(" | Pos: ");
@@ -153,6 +209,16 @@ void loop()
         Serial.print(" | ");
         Serial.print((sizeof(musMbTime)/sizeof(int)));
         Serial.println("");
+=======
+        Serial
+          << "Time: "
+          << musTime
+          << " | Pos: "
+          << musPos
+          << " | "
+          << (sizeof(musMbTime)/sizeof(int))
+          << "\n";
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
       }
     }
   }
@@ -163,4 +229,8 @@ void loop()
   }
 
   // set output
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 69d46f2d96acb24a0acadd6ba537abcb0923600a
